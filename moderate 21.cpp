@@ -3,20 +3,23 @@
 #include<math.h>
 int main()
 {
-	int rev(int num);
-	int num;
-	printf("Enter a number you want to reverse : ");
-	scanf("%d",&num);
-	printf("reversed number :");
-	rev(num);
+	void rev(int a);
+	int a;
+	printf("Enter a number : ");
+	scanf("%d",&a);
+	rev(a);
 }
-int rev(int num)
+void rev(int a)
 {
-	int reve;
-	while(num!=0)
+	int b,d,c=0;
+	
+	while(a!=0)
 	{
-		reve=num%10;
-		printf("%d",reve);
-		num=num/10;
+		
+		b=a%10;
+		c=c*10 +b;
+		a=a/10;
+		
 	}
+	printf("%d",c);
 }
